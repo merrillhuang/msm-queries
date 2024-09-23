@@ -1,0 +1,27 @@
+<h1>List of all actorss</h1>
+<hr>
+
+<table border="1">
+  <tbody>
+    <tr>
+      <th>ID</th>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Dob</th>
+      <th></th>
+    </tr>
+    <% @actors.each { |actor| %>
+      <tr>
+        <td><%= actor.id %></td>
+        <td><img style="width:250px" src=
+          <%= actor.image %> >
+        </td>
+        <td><%= actor.name %></td>
+        <td><%= actor.dob %></td>
+        <td>
+          <a href = "/actors/<%= actor.id %>">Show details</a>
+        </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>

@@ -1,0 +1,27 @@
+<h1>List of all directors</h1>
+<hr>
+
+<table border="1">
+  <tbody>
+    <tr>
+      <th>ID</th>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Dob</th>
+      <th></th>
+    </tr>
+    <% @directors.each { |director| %>
+      <tr>
+        <td><%= director.id %></td>
+        <td><img style="width:250px" src=
+          <%= director.image %> >
+        </td>
+        <td><%= director.name %></td>
+        <td><%= director.dob %></td>
+        <td>
+          <a href = "/directors/<%= director.id %>">Show details</a>
+        </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>
